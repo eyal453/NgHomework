@@ -266,6 +266,7 @@
 body {
   font-family: "Open Sans";
   font-size: 16.5px;
+  padding-bottom: 50px;
 }
 header.head {
   background-color: #333333;
@@ -316,8 +317,10 @@ header.head .logo .text h3 {
 .shopping-list-page .add-new-title {
   text-transform: uppercase;
 }
-.shopping-list-page ul.list-group {
-  margin-top: 40px;
+.shopping-list-page h3.shopping-title {
+  border-bottom: 1px solid #999999;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
 }
 .shopping-list-page ul.list-group li {
   min-height: 70px;
@@ -340,7 +343,7 @@ header.head .logo .text h3 {
   cursor: pointer;
 }
 .shopping-list-page ul.list-group li:hover {
-  background-color: rgba(61, 188, 207, 0.05);
+  background-color: rgba(238, 238, 238, 0.4);
 }
 .shopping-list-page ul.list-group li:hover .delete i {
   opacity: 1;
@@ -357,5 +360,16 @@ header.head .logo .text h3 {
   box-shadow: 4px 4px 8px 0 #ccc;
   border: 1px solid #f2f2f2;
   background-color: #fafafa;
+}
+footer {
+  height: 50px;
+  background-color: #333333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer h6 {
+  color: #fff;
+  margin-top: 18px;
 }
 /*# sourceMappingURL=site.css.map */
