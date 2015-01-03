@@ -1,0 +1,117 @@
+﻿@import "mixins.less";
+
+@dark1: #333;
+@light1: #eee;
+@light2: #fafafa;
+@accent1: #3dbccf;
+
+body {
+    font-family: "Open Sans";
+    font-size: 16.5px;
+}
+
+header.head {
+    background-color: @dark1;
+    border-bottom: 4px solid @accent1;
+    box-shadow: 0 1px 4px 0 #ccc;
+    margin-bottom: 40px;
+
+    .logo {
+        float: left;
+        margin: 10px 0;
+        text-decoration: none;
+
+        &:hover {
+            img {
+                ._transform(rotate(10deg));
+                height: 60px;
+                margin-top: -5px;
+                margin-left: -5px;
+            }
+        }
+
+        img {
+            position: absolute;
+            float: left;
+            height: 50px;
+            margin-right: 10px;
+            ._transition(all 0.2s);
+        }
+
+        .text {
+            float: left;
+            margin-left: 56px;
+
+            h1 {
+                color: #fff;
+                margin: 0;
+                font-size: 1.8em;
+            }
+
+            h3 {
+                color: #fff;
+                font-size: 0.8em;
+                margin: 0;
+                float: right;
+            }
+        }
+    }
+}
+
+.shopping-list-page {
+    .shopping-title, .add-new-title {
+        text-transform: uppercase;
+    }
+
+    ul.list-group {
+        margin-top: 40px;
+
+        li {
+            min-height: 70px;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid @light1;
+            margin-bottom: 1px;
+            ._transition(all 0.2s);
+
+            .delete {
+                i {
+                    font-size: 1.4em;
+                    opacity: 0.1;
+                    ._transition(all 0.2s);
+                    cursor: pointer;
+                }
+            }
+
+            &:hover {
+                background-color: fade(@accent1,5%);
+
+                .delete {
+                    i {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .new-item {
+        .add-new-title {
+            margin: 0 0 40px 0;
+        }
+
+        form {
+            label {
+                font-size: 1em;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+.app-box {
+    padding: 20px;
+    box-shadow: 4px 4px 8px 0 #ccc;
+    border: 1px solid darken(@light2,3%);
+    background-color: @light2;
+}
